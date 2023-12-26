@@ -1,13 +1,10 @@
+import { SignUpForm } from '@/components/form/SignUpForm';
+import React from 'react';
 
-import { SignUpForm } from '@/components/form/SignUpForm'
-import React from 'react'
-
-type Props = {}
-
-const SignUp = (props: Props) => {
+const SignUp = () => {
   return (
-    <div className='w-full'><SignUpForm /></div>
-  )
-}
+    <div className="w-full"><SignUpForm /></div>
+  );
+};
 
-export default SignUp
+export default SignUp;

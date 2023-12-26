@@ -1,14 +1,12 @@
-import { SignInForm } from '@/components/form/SignInForm'
-import React from 'react'
+import { SignInForm } from '@/components/form/SignInForm';
+import React from 'react';
 
-type Props = {}
-
-const SignIn = (props: Props) => {
+const SignIn = () => {
   return (
-    <div className='w-full'>
+    <div className="w-full">
       <SignInForm />
     </div>
-  )
-}
+  );
+};
 
-export default SignIn
+export default SignIn;

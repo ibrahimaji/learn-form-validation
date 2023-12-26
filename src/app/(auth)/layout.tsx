@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 
 interface AuthLayoutProps {
   children: React.ReactNode;
@@ -6,8 +6,8 @@ interface AuthLayoutProps {
 
 const AuthLayout: React.FC<AuthLayoutProps> = ({ children }) => {
   return (
-    <div className='bg-slate-200 p-10 rounded-md'>{children}</div>
-  )
-}
+    <div className="bg-slate-200 p-10 rounded-md">{children}</div>
+  );
+};
 
-export default AuthLayout
+export default AuthLayout;
