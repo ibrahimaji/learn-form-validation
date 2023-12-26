@@ -21,8 +21,8 @@ export const SignInForm = () => {
     resolver: zodResolver(formSchema),
   });
 
-  const onSubmit = (values: z.infer<typeof formSchema>) => {
-    console.log(values);
+  const onSubmit = (/* values: z.infer<typeof formSchema> */) => {
+    // console.log(values);
   };
 
   return (

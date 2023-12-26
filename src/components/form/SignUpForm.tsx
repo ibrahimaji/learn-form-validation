@@ -18,19 +18,17 @@ const formSchema = z
   })
   .refine((data) => data.password === data.confirmPassword, {
     path: ['confirmPassword'],
-    message: 'Password do not match'
-  })
+    message: 'Password do not match',
+  });
 
 export const SignUpForm = () => {
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
   });
 
-  const onSubmit = (values: z.infer<typeof formSchema>) => {
-    console.log(values);
+  const onSubmit = (/* values: z.infer<typeof formSchema> */) => {
+    // console.log(values);
   };
-
-  const { register, handleSubmit, clearErrors, formState: { errors } } = form;
 
   return (
     <Form {...form}>
@@ -69,7 +67,7 @@ export const SignUpForm = () => {
               <FormItem>
                 <FormLabel>Re-enter Your Password</FormLabel>
                 <FormControl>
-                  <Input type="password" placeholder="Re-enter your password" {...field} onChange={() => clearErrors("confirmPassword")} />
+                  <Input type="password" placeholder="Re-enter your password" {...field} onChange={() => clearErrors('confirmPassword')} />
                 </FormControl>
                 <FormMessage />
               </FormItem>
